@@ -4,7 +4,7 @@ import requests
 import snowflake.connector
 
 # streamlit.text(streamlit.secrets["snowflake"])
-my_cnx = snowflake.connector.connect(streamlit.secrets["snowflake"])
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 # streamlit.text(my_cnx)
 # my_cur = my_cnx.cursor()
 # streamlit.text(my_cur)
