@@ -4,6 +4,7 @@ import requests
 import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+streamlit.text(my_cnx)
 my_cur = my_cnx.cursor()
 streamlit.text(my_cur)
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
