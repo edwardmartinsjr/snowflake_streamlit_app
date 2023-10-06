@@ -3,14 +3,15 @@ import pandas
 import requests
 import snowflake.connector
 
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-streamlit.text(my_cnx)
-my_cur = my_cnx.cursor()
-streamlit.text(my_cur)
-my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
-my_data_row = my_cur.fetchone()
-streamlit.text("Hello from Snowflake:")
-streamlit.text(my_data_row)
+streamlit.text(streamlit.secrets["snowflake"])
+# my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+# streamlit.text(my_cnx)
+# my_cur = my_cnx.cursor()
+# streamlit.text(my_cur)
+# my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
+# my_data_row = my_cur.fetchone()
+# streamlit.text("Hello from Snowflake:")
+# streamlit.text(my_data_row)
  
 streamlit.title('My Parents New Healthy Diner')
 streamlit.header('Breakfast Menu')
